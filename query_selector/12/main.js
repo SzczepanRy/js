@@ -44,3 +44,17 @@ hideBox.addEventListener("change",(e)=>{
         list.style.display = "block"
     }
 })
+const serchBar = document.forms["search-books"].querySelector("input")
+serchBar.addEventListener("keyup",(e)=>{
+    const term = e.target.value.toLowerCase()
+    const books = list.getElementsByTagName("li")
+    Array.from(books).forEach(element => {
+        const title = element.firstElementChild.textContent
+        if(title.toLowerCase().indexOf(term)!=-1){
+            element.style.display="block"
+        }else{
+            element.style.display="none"
+        }
+    });
+
+})

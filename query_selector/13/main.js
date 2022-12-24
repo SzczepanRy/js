@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded",()=>{
+    
 const list = document.querySelector("#book-list ul")
 const forms = document.forms
 
@@ -43,4 +45,37 @@ hideBox.addEventListener("change",(e)=>{
     }else{
         list.style.display = "block"
     }
+})
+const serchBar = document.forms["search-books"].querySelector("input")
+serchBar.addEventListener("keyup",(e)=>{
+    const term = e.target.value.toLowerCase()
+    const books = list.getElementsByTagName("li")
+    Array.from(books).forEach(element => {
+        const title = element.firstElementChild.textContent
+        if(title.toLowerCase().indexOf(term)!=-1){
+            element.style.display="block"
+        }else{
+            element.style.display="none"
+        }
+    });
+
+})
+
+const tabs = document.querySelector(".tabs")
+
+const panels = document.querySelectorAll(".panel")
+
+tabs.addEventListener("click",(e)=>{
+    if(e.target.tagName === "LI"){
+        const targetPanel = document.querySelector(e.target.dataset.target)
+        panels.forEach((pan)=>{
+            if(pan === targetPanel){
+
+                pan.classList.add("active")
+            }else{
+                pan.classList.remove("active")
+            }
+        })
+    }
+})
 })
