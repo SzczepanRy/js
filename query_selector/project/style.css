@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+html body {
+  width: 40%;
+  height: fit-content;
+}
+html body header {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(91, 135, 170, 0.467);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 24px;
+  font-family: fantasy;
+  color: rgba(121, 98, 98, 0.467);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+html body main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 100%;
+  background-color: rgba(3, 71, 126, 0.467);
+}
+html body main .get-book {
+  color: rgba(255, 255, 255, 0.467);
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+html body main .get-book .get-in {
+  color: rgba(255, 255, 255, 0.467);
+  background-color: rgba(91, 135, 170, 0.467);
+  width: 80%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+html body main .books {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.467);
+}
+html body main .books li {
+  margin-top: 10px;
+}
+html body main .add-book {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 80%;
+  justify-content: end;
+}
+html body main .add-book .add-in {
+  position: relative;
+  color: rgba(255, 255, 255, 0.467);
+  background-color: rgba(91, 135, 170, 0.467);
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+html body main .add-book .add-btn {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.467);
+  background-color: rgba(91, 135, 170, 0.467);
+  width: 50px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

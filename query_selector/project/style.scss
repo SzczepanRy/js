@@ -1,0 +1,106 @@
+
+@mixin center($dir:row){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+};
+
+$bg1:rgba(91, 135, 170, 0.467);
+$bg2:rgba(3, 71, 126, 0.467);
+
+$tx1:rgba(121, 98, 98, 0.467);
+$tx2:rgba(255, 255, 255, 0.467);
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100vh;
+    width: 100vw;
+    @include center();
+    
+    body{
+        
+        width: 40%;
+        height: fit-content;
+        header{
+            height: 40px;
+            width: 100%;
+            background-color: $bg1;
+            @include center();
+            font-size: 24px;
+            font-family: fantasy;
+            color: $tx1;
+
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            height: 100%;
+            background-color: $bg2;
+            .get-book{
+                color: $tx2;
+                padding-top: 20px;
+                width: 100%;
+                @include center();
+                .get-in{
+                    color: $tx2;
+                    background-color: $bg1;
+                    width: 80%;
+                    height: 30px;
+                    border-radius: 20px;
+                    border: none;
+                    text-align: center;
+                }
+            }
+            .books{
+                list-style: none;
+                color: $tx2;
+                li{
+                    margin-top: 10px;
+                }
+            }
+            .add-book{
+                height: 100%;
+                display: flex;
+                align-items: end;
+                margin-top: 10px;
+                margin-bottom: 30px;
+                width: 80%;
+                justify-content: end;
+                
+                .add-in{
+                    position: relative;
+                    color: $tx2;
+                    background-color: $bg1;
+                    width: 100%;
+                    height: 30px;
+                    border-radius: 20px;
+                    border: none;
+                    text-align: center;
+                }
+                .add-btn{
+                    
+                    position: absolute;
+                    color: $tx2;
+                    background-color: $bg1;
+                    width: 50px;
+                    height: 30px;
+                    border-radius: 20px;
+                    border: none;
+                    text-align: center;
+                   
+                }
+            }
+        }
+    }
+    
+}
