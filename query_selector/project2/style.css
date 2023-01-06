@@ -1,0 +1,67 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.add_form {
+	width: 50%;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+main {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.aside {
+	margin-left: 20px;
+	background-color: cadetblue;
+	text-align: center;
+	height: 100%;
+	width: fit-content;
+}
+.list {
+	list-style: none;
+	height: 30%;
+	width: 100%;
+	width: fit-content;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+li {
+	margin-top: 10px;
+	display: flex;
+}
+.del {
+	display: none;
+}
+.track {
+	margin-top: 20px;
+	height: 300px;
+	width: 400px;
+	border: 2px black solid;
+	border-radius: 20px;
+}
+
+.cords * {
+	display: flex;
+}
+
+.xylist {
+	margin-top: 20px;
+}
+.xylist * {
+	margin-left: 20px;
+}
